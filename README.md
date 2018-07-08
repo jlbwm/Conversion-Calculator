@@ -8,7 +8,7 @@
 
 TODO:
 1. change status from Int number 0，1，2，3 to enum type
-2. add function，type from the input & output textFeild can be calculated
+2. add function，typing from the input & output textFeild can be calculated
 
 ## version 0.0.1
 
