@@ -13,6 +13,7 @@
 		96C5DEC020F1BE5500F838C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C5DEBE20F1BE5500F838C2 /* LaunchScreen.storyboard */; };
 		96C5DEC920F1C9FF00F838C2 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C5DEC820F1C9FF00F838C2 /* CalculatorViewController.swift */; };
 		96C5DECB20F1CB8B00F838C2 /* ConverterItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C5DECA20F1CB8B00F838C2 /* ConverterItems.swift */; };
+		96C5DECD20F1E13B00F838C2 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C5DECC20F1E13B00F838C2 /* Converter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		96C5DEC120F1BE5500F838C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96C5DEC820F1C9FF00F838C2 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		96C5DECA20F1CB8B00F838C2 /* ConverterItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterItems.swift; sourceTree = "<group>"; };
+		96C5DECC20F1E13B00F838C2 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				96C5DEC820F1C9FF00F838C2 /* CalculatorViewController.swift */,
 				96C5DEB920F1BE5400F838C2 /* Main.storyboard */,
 				96C5DECA20F1CB8B00F838C2 /* ConverterItems.swift */,
+				96C5DECC20F1E13B00F838C2 /* Converter.swift */,
 				96C5DEBE20F1BE5500F838C2 /* LaunchScreen.storyboard */,
 				96C5DEC120F1BE5500F838C2 /* Info.plist */,
 				96C5DEC720F1BE9C00F838C2 /* SupportingFiles */,
@@ -148,6 +151,7 @@
 			files = (
 				96C5DECB20F1CB8B00F838C2 /* ConverterItems.swift in Sources */,
 				96C5DEC920F1C9FF00F838C2 /* CalculatorViewController.swift in Sources */,
+				96C5DECD20F1E13B00F838C2 /* Converter.swift in Sources */,
 				96C5DEB620F1BE5400F838C2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
