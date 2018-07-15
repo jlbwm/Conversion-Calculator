@@ -10,10 +10,7 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
-    let converterArray = [  ConverterItems("fahrenheit to celcius", "°F", "°C"),
-                            ConverterItems("celcius to fahrenheit", "°C", "°F"),
-                            ConverterItems("miles to kilometers", "mi", "km"),
-                            ConverterItems("kilometers to miles", "km", "mi")]
+    
     
     let convertInstance = Converter()
     
@@ -26,40 +23,40 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        outputDisplay.text = converterArray[0].outputUnit
-        inputDisplay.text = converterArray[0].inputUnit
+        outputDisplay.text = convertInstance.converterArray[0].outputUnit
+        inputDisplay.text = convertInstance.converterArray[0].inputUnit
         
     }
     
     @IBAction func ConverterButton(_ sender: Any) {
         let item = UIAlertController(title: "Choose Converter", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         
-        item.addAction(UIAlertAction(title: converterArray[0].label, style: UIAlertActionStyle.default, handler: {
+        item.addAction(UIAlertAction(title: convertInstance.converterArray[0].label, style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
-            self.outputDisplay.text = self.converterArray[0].outputUnit
-            self.inputDisplay.text = self.converterArray[0].inputUnit
+            self.outputDisplay.text = self.convertInstance.converterArray[0].outputUnit
+            self.inputDisplay.text = self.convertInstance.converterArray[0].inputUnit
             self.convertInstance.status = 0
         }))
         
-        item.addAction(UIAlertAction(title: converterArray[1].label, style: UIAlertActionStyle.default, handler: {
+        item.addAction(UIAlertAction(title: convertInstance.converterArray[1].label, style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
-            self.outputDisplay.text = self.converterArray[1].outputUnit
-            self.inputDisplay.text = self.converterArray[1].inputUnit
+            self.outputDisplay.text = self.convertInstance.converterArray[1].outputUnit
+            self.inputDisplay.text = self.convertInstance.converterArray[1].inputUnit
             self.convertInstance.status = 1
         }))
         
-        item.addAction(UIAlertAction(title: converterArray[2].label, style: UIAlertActionStyle.default, handler: {
+        item.addAction(UIAlertAction(title: convertInstance.converterArray[2].label, style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
-            self.outputDisplay.text = self.converterArray[2].outputUnit
-            self.inputDisplay.text = self.converterArray[2].inputUnit
+            self.outputDisplay.text = self.convertInstance.converterArray[2].outputUnit
+            self.inputDisplay.text = self.convertInstance.converterArray[2].inputUnit
             self.convertInstance.status = 2
             
         }))
         
-        item.addAction(UIAlertAction(title: converterArray[3].label, style: UIAlertActionStyle.default, handler: {
+        item.addAction(UIAlertAction(title: convertInstance.converterArray[3].label, style: UIAlertActionStyle.default, handler: {
             (alertAction) -> Void in
-            self.outputDisplay.text = self.converterArray[3].outputUnit
-            self.inputDisplay.text = self.converterArray[3].inputUnit
+            self.outputDisplay.text = self.convertInstance.converterArray[3].outputUnit
+            self.inputDisplay.text = self.convertInstance.converterArray[3].inputUnit
             self.convertInstance.status = 3
         }))
         
@@ -72,21 +69,21 @@ class CalculatorViewController: UIViewController {
         switch convertInstance.status{
             
             case 0:
-                self.outputDisplay.text = self.converterArray[0].outputUnit
-                self.inputDisplay.text = self.converterArray[0].inputUnit
+                self.outputDisplay.text = self.convertInstance.converterArray[0].outputUnit
+                self.inputDisplay.text = self.convertInstance.converterArray[0].inputUnit
             
             case 1:
-                self.outputDisplay.text = self.converterArray[1].outputUnit
-                self.inputDisplay.text = self.converterArray[1].inputUnit
+                self.outputDisplay.text = self.convertInstance.converterArray[1].outputUnit
+                self.inputDisplay.text = self.convertInstance.converterArray[1].inputUnit
             
             case 2:
-                self.outputDisplay.text = self.converterArray[2].outputUnit
-                self.inputDisplay.text = self.converterArray[2].inputUnit
+                self.outputDisplay.text = self.convertInstance.converterArray[2].outputUnit
+                self.inputDisplay.text = self.convertInstance.converterArray[2].inputUnit
             
             case 3:
             
-                self.outputDisplay.text = self.converterArray[3].outputUnit
-                self.inputDisplay.text = self.converterArray[3].inputUnit
+                self.outputDisplay.text = self.convertInstance.converterArray[3].outputUnit
+                self.inputDisplay.text = self.convertInstance.converterArray[3].inputUnit
             
             default:
                 print("Someting went wrong")
@@ -120,13 +117,13 @@ class CalculatorViewController: UIViewController {
             
             digitalNumber = digitalNumber! * multiRatio
             
-            self.inputDisplay.text = String(digitalNumber!) + self.converterArray[convertInstance.status].inputUnit
+            self.inputDisplay.text = String(digitalNumber!) + self.convertInstance.converterArray[convertInstance.status].inputUnit
             
             let convertNumber = convertInstance.selectedFunction(status: convertInstance.status, input: String(digitalNumber!))
             
             let outputString = String(format: "%.2f", convertNumber)
             
-            self.outputDisplay.text = outputString + self.converterArray[convertInstance.status].outputUnit
+            self.outputDisplay.text = outputString + self.convertInstance.converterArray[convertInstance.status].outputUnit
             
         }
         
@@ -160,7 +157,7 @@ class CalculatorViewController: UIViewController {
             
             let outputString = String(format: "%.2f", convertNumber)
             
-            self.outputDisplay.text = outputString + self.converterArray[convertInstance.status].outputUnit
+            self.outputDisplay.text = outputString + self.convertInstance.converterArray[convertInstance.status].outputUnit
         }
         
     }

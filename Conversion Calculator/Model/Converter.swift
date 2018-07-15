@@ -10,6 +10,12 @@ import Foundation
 
 class Converter
 {
+    
+    let converterArray = [  ConverterItems("fahrenheit to celcius", "°F", "°C"),
+                            ConverterItems("celcius to fahrenheit", "°C", "°F"),
+                            ConverterItems("miles to kilometers", "mi", "km"),
+                            ConverterItems("kilometers to miles", "km", "mi")]
+    
     var status = 0
 
     func fahrenheit2Celcius(for input: String) -> Double
